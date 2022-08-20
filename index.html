@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Hira Amir </title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    body {
+      font-family: "Lato", sans-serif
+    }
+
+    .mySlides {
+      display: none
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <div class="w3-top">
+    <div class="w3-bar w3-black w3-card">
+      <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)"
+        onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+      <a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+      <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
+
+    </div>
+  </div>
+
+  <!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+  <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+    <a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
+  </div>
+
+  <!-- Page content -->
+  <div class="w3-content" style="max-width:2000px;margin-top:46px">
+
+    <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
+      <h1 class="w3-wide">AI-Based Lawyer</h1>
+      <p class="w3-opacity"><i> Problem Statement</i></p>
+      <p class="w3-justify">Two non-technical investors thought of an idea to create an AI-based lawyer that can process
+        textual queries and answer them accordingly with citations to the PPC (Pakistan Penal Code) and Constitution.
+        This is especially useful for people living in remote areas and even urban women looking to get a consultation
+        privately. Luckily, you run a software development business and will be providing them services.</p>
+      <h3 class="w3-wide">Functional Requirements</h3>
+      <p class="w3-opacity"><i> Query Input </i></p>
+      <ol>
+        <li>
+          <p class="w3-justify">The user will submit a text string as a query to this unit.</p>
+        </li>
+
+      </ol>
+
+      <p class="w3-opacity"><i> Query Handling </i></p>
+      <ol>
+        <li>
+          <p class="w3-justify">The unit will determine which words are crucial to the meaning of the text and replace them with generic equivalents that are preceded by an escape character. 
+          </p>
+        </li>
+        <li>
+          <p class="w3-justify">The sentence will be output by the unit as a string.</p>
+        </li>
+        <li>
+          <p class="w3-justify">If there is a mistake during this procedure, the generic inquiry couldn't be created correctly from the sentence. Send back a message saying, "Sorry, I didn't understand it" in this situation.
+          </p>
+        </li>
+        <li>
+          <p class="w3-justify">The system will provide an example question after the text with the API response if a question is not understood by our API.
+          </p>
+        </li>
+        <li>
+          <p class="w3-justify">Following a user's input, the chatbot should be able to choose or generate a response depending on that information and the conversation's context. The provided responses must make sense in the context inferred from the entry.
+
+          </p>
+        </li>
+        <li>
+          <p class="w3-justify">The system will reply to the user with the solution as a second text message after sending the user's text to the API.
+
+          </p>
+        </li>
+      </ol>
+
+      <p class="w3-opacity"><i> User Interface </i></p>
+      <ol>
+        <li>
+          <p class="w3-justify">A chat window on the GUI will show queries submitted to the system and API responses.
+
+          </p>
+        </li>
+        <li>
+          <p class="w3-justify">There will be a textbox on the GUI that can be filled in using keyboard inputs.
+          </p>
+        </li>
+        <li>
+          <p class="w3-justify">The "Send" button on the GUI will, when clicked, send text from the textbox to the API.
+          </p>
+        </li>
+        <li>
+          <p class="w3-justify">All of the queries and responses from the current session are displayed in the chat window, with a scroll bar available if necessary.
+
+          </p>
+        </li>
+      </ol>
+
+      <p class="w3-opacity"><i> Error Handling </i></p>
+      <ol>
+        <li>
+          <p class="w3-justify">The chat window will show an error message if there is a network issue.
+          </p>
+        </li>
+        <li>
+          <p class="w3-justify">To prevent that small mistakes can affect the chatbot's comprehension, the application should activate the "auto-correct" feature when a user inputs a spelling mistake or makes a sentence-level error. 
+          </p>
+        </li>
+      </ol>
+
+      <p class="w3-opacity"><i> Integration </i></p>
+      <ol>
+        <li>
+          <p class="w3-justify">The chatbot should be coupled with a knowledge-based database and configured to swiftly retrieve information.
+          </p>
+        </li>
+        <li>
+          <p class="w3-justify">The chatbot should be integrated with a database of PPC (Pakistan Penal Code) and Constitution , to answer queries accordingly
+          </p>
+        </li>
+      </ol>
+
+      <p class="w3-opacity"><i>Technology </i></p>
+      <ol>
+        <li>
+          <p class="w3-justify">Python will be utilised as the programming language.
+
+          </p>
+        </li>
+
+        <li>
+          <p class="w3-justify">All data needed to provide answers will be kept in a MySQL database.
+
+          </p>
+        </li>
+      </ol>
+
+      <p class="w3-opacity"><i> Updation </i></p>
+      <ol>
+        <li>
+          <p class="w3-justify">Periodically, updates to the database will take place, and those updates will prevent access to the API.
+          </p>
+        </li>
+      </ol>
+
+      <p class="w3-opacity"><i> Language </i></p>
+      <ol>
+        <li>
+          <p class="w3-justify">Although the chatbot has to understand English in order to function, it should be thought about expanding the languages that are now supported in the future.
+          </p>
+        </li>
+      </ol>
+
+      <p class="w3-opacity"><i> Administration </i></p>
+      <ol>
+        <li>
+          <p class="w3-justify">The administrator should be able to to add, update and delete questions, answers and keywords.
+
+          </p>
+        </li>
+      </ol>
+
+      <h3 class="w3-wide">Non-Functional Requirements</h3>
+      <p class="w3-opacity"><i> Security</i></p>
+      <ol>
+        <li>
+          <p class="w3-justify">The database ought to be secured against intrusions and illegal access.
+          </p>
+        </li>
+        <li>
+          <p class="w3-justify">For security, HTTPS will be used to establish the connection between the Web API and the
+            apps.
+          </p>
+        </li>
+
+      </ol>
+      <p class="w3-opacity"><i>Effectiveness</i></p>
+      <ol>
+        <li>
+          <p class="w3-justify">If exceptions do occur, they should be effectively reported to the user.
+          </p>
+        </li>
+      </ol>
+
+      <p class="w3-opacity"><i>Scalability</i></p>
+      <ol>
+        <li>
+          <p class="w3-justify">The system must be scalable depending on how many people are utilising it.
+          </p>
+        </li>
+      </ol>
+
+      <p class="w3-opacity"><i>Availability
+      </i></p>
+      <ol>
+        <li>
+          <p class="w3-justify">Our programme is fully independent of any network provider and can operate even when there is no internet connection. It can be used every day of the year, 24/7.
+          </p>
+        </li>
+
+        <li>
+          <p class="w3-justify">The chatbot ought to be designed to function in the majority of server configurations. In light of this, a chatbot should be able to function in either server environment.
+          </p>
+        </li>
+
+        <li>
+          <p class="w3-justify">The chatbot must be able to understand natural language within a certain domain and be able to determine the user input topic independently of the construction of the sentence.
+
+          </p>
+        </li>
+      </ol>
+
+      <p class="w3-opacity"><i>Performance
+      </i></p>
+      <ol>
+        <li>
+          <p class="w3-justify">The chatbot should write answers more quickly than it would take a human to do so.
+          </p>
+        </li>
+
+        <li>
+          <p class="w3-justify">Over the question testing set, the server will typically respond in less than or equal to 2 seconds.
+
+
+          </p>
+        </li>
+      </ol>
+
+      <p class="w3-opacity"><i>Data management
+      </i></p>
+      <ol>
+        <li>
+          <p class="w3-justify">In order to efficiently address customer issues and obtain insights from pertinent data, the chatbot can acquire, interpret, and process massive amounts of data.
+
+          </p>
+        </li>
+      </ol>
+
+      <p class="w3-opacity"><i>User Interface 
+      </i></p>
+      <ol>
+        <li>
+          <p class="w3-justify">User interfaces and experiences (UI / UX) must be carefully created.
+
+
+          </p>
+        </li>
+      </ol>
+
+      <p class="w3-opacity"><i>Expandability
+      </i></p>
+      <ol>
+        <li>
+          <p class="w3-justify">By examining interactions, chatbot software should constantly increase its own knowledge base.
+          </p>
+        </li>
+      </ol>
+      <h3 class="w3-wide">Time Estimation</h3>
+      <p class="w3-justify">The construction of an AI-based layer can take 2–8 weeks and cost between $20,000 and $80,000.</p>
+
+     
+     
+
+      <div class="w3-row w3-padding-32">
+
+        <div class="w3-third">
+          <img src="Hira.png" class="w3-round w3-margin-bottom" alt="Random Name" style="width:60%">
+          <p>Hira Amir</p>
+          <p>Developer and Designer</p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- The Contact Section -->
+    <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="contact">
+      <h2 class="w3-wide w3-center">CONTACT</h2>
+      <p class="w3-opacity w3-center"><i>Drop a note!</i></p>
+      <div class="w3-row w3-padding-32">
+        <div class="w3-col m6 w3-large w3-margin-bottom">
+          <i class="fa fa-map-marker" style="width:30px"></i> Jamshoro,Pakistan <br>
+          <i class="fa fa-envelope" style="width:30px"> </i> Email: hiraamirbux@gmail.com<br>
+        </div>
+
+        <div class="w3-col m6">
+          <form action="https://formsubmit.co/hiraamirbux@gmail.com" method="POST" target="_blank">
+            <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+              <div class="w3-half">
+                <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+              </div>
+              <div class="w3-half">
+                <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+              </div>
+            </div>
+            <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
+            <button class="w3-button w3-black w3-section w3-right" type="submit">SEND</button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- End Page Content -->
+  </div>
+
+
+  <!-- Footer -->
+  <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+    <a href="https://web.facebook.com/hira.bux.1"> <i class="fa fa-facebook-official w3-hover-opacity"></i></a>
+    <a href="https://twitter.com/hira_bux"> <i class="fa fa-twitter w3-hover-opacity"></i></a>
+    <a href="https://www.linkedin.com/in/hiraamirbux/"> <i class="fa fa-linkedin w3-hover-opacity"></i></a>
+    <p class="w3-medium">Discord: Hira amir#1865</p>
+  </footer>
+
+  <script>
+    // Automatic Slideshow - change image every 4 seconds
+    var myIndex = 0;
+    carousel();
+
+    function carousel() {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      myIndex++;
+      if (myIndex > x.length) { myIndex = 1 }
+      x[myIndex - 1].style.display = "block";
+      setTimeout(carousel, 4000);
+    }
+
+    // Used to toggle the menu on small screens when clicking on the menu button
+    function myFunction() {
+      var x = document.getElementById("navDemo");
+      if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+      } else {
+        x.className = x.className.replace(" w3-show", "");
+      }
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    var modal = document.getElementById('ticketModal');
+    window.onclick = function (event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
+
+</body>
+
+</html>
